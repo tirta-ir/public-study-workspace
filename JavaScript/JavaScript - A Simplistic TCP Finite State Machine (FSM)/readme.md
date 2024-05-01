@@ -1,10 +1,5 @@
 # A Simplistic TCP Finite State Machine (FSM)
 
-## Introduction
-This sub-repo provides a solution and explaination for a **4th Kyu Kata in Code Wars**. The content provided in this document is solely for the purpose of training my coding skills.
-
-Any explaination and description is shared for educational purposes and isn't intended for cheating on Code Wars attempt. Feel free to learn from it.
-
 ## Description
 Automatons, or Finite State Machines (FSM), are extremely useful to programmers when it comes to software design. You will be given a simplistic version of an FSM to code for a basic TCP session.
 
@@ -89,3 +84,8 @@ Action of each event upon each state (the format is ``INITIAL_STATE: EVENT -> NE
 - If a transition exists, it updates the state to the next state.
 - If no transition exists, it returns "ERROR".
 After iterating over all events, it returns the final state.
+
+## Disclaimer
+This sub-repo provides a solution and explaination for a **4th Kyu Kata in Code Wars**. The content provided in this document is solely for the purpose of training my coding skills.
+
+Any explaination and description is shared for educational purposes and isn't intended for cheating on Code Wars attempt. Feel free to learn from it.
