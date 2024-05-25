@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman Coding Encoder/Decoder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Huffman Coding Algorithm</h1>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="encode-tab" data-toggle="tab" href="#encode" role="tab" aria-controls="encode" aria-selected="true">Encode</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="decode-tab" data-toggle="tab" href="#decode" role="tab" aria-controls="decode" aria-selected="false">Decode</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="encode" role="tabpanel" aria-labelledby="encode-tab">
+                <div class="form-group mt-3">
+                    <label for="encodeInput">Input Text:</label>
+                    <textarea class="form-control" id="encodeInput" rows="5" placeholder="Enter text to encode"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="encodeText()">Encode</button>
+                <div class="form-group mt-3">
+                    <label for="encodedOutput">Encoded Text:</label>
+                    <textarea class="form-control" id="encodedOutput" rows="5" readonly></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="codebookOutput">Huffman Codebook:</label>
+                    <textarea class="form-control" id="codebookOutput" rows="5" readonly></textarea>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="decode" role="tabpanel" aria-labelledby="decode-tab">
+                <div class="form-group mt-3">
+                    <label for="decodeInput">Encoded Text:</label>
+                    <textarea class="form-control" id="decodeInput" rows="5" placeholder="Enter encoded text"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="decodeCodebook">Huffman Codebook:</label>
+                    <textarea class="form-control" id="decodeCodebook" rows="5" placeholder="Enter Huffman codebook"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="decodeText()">Decode</button>
+                <div class="form-group mt-3">
+                    <label for="decodedOutput">Decoded Text:</label>
+                    <textarea class="form-control" id="decodedOutput" rows="5" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
